@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pjb.springbootauthoritymanage.mapper.SysAclMapper">
+    <resultMap id="BaseResultMap" type="com.pjb.springbootauthoritymanage.model.SysAcl" autoMapping="true">
+
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, code, name, acl_module_id, url, type, status, seq, remark, operator, operate_time,
+        operate_ip
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_acl
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from sys_acl
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert">
+        insert into sys_acl (id, code, name,
+                             acl_module_id, url, type,
+                             status, seq, remark,
+                             operator, operate_time, operate_ip
+        )
+        values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+                #{aclModuleId,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER},
+                #{status,jdbcType=INTEGER}, #{seq,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR},
+                #{operator,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}, #{operateIp,jdbcType=VARCHAR}
+               )
+    </insert>
+    <insert id="insertSelective" parameterType="com.pjb.springbootauthoritymanage.model.SysAcl" keyProperty="id" useGeneratedKeys="true">
+        insert into sys_acl
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="code != null" >
+                code,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="aclModuleId != null" >
+                acl_module_id,
+            </if>
+            <if test="url != null" >
+                url,
+            </if>
+            <if test="type != null" >
+                type,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+            <if test="seq != null" >
+                seq,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
+            <if test="operator != null" >
+                operator,
+            </if>
+            <if test="operateTime != null" >
+                operate_time,
+            </if>
+            <if test="operateIp != null" >
+                operate_ip,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="code != null" >
+                #{code,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="aclModuleId != null" >
+                #{aclModuleId,jdbcType=INTEGER},
+            </if>
+            <if test="url != null" >
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="seq != null" >
+                #{seq,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null" >
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="operator != null" >
+                #{operator,jdbcType=VARCHAR},
+            </if>
+            <if test="operateTime != null" >
+                #{operateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operateIp != null" >
+                #{operateIp,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.pjb.springbootauthoritymanage.model.SysAcl" >
+        update sys_acl
+        <set >
+            <if test="code != null" >
+                code = #{code,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="aclModuleId != null" >
+                acl_module_id = #{aclModuleId,jdbcType=INTEGER},
+            </if>
+            <if test="url != null" >
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="seq != null" >
+                seq = #{seq,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null" >
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="operator != null" >
+                operator = #{operator,jdbcType=VARCHAR},
+            </if>
+            <if test="operateTime != null" >
+                operate_time = #{operateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operateIp != null" >
+                operate_ip = #{operateIp,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.pjb.springbootauthoritymanage.model.SysAcl" >
+        update sys_acl
+        set code = #{code,jdbcType=VARCHAR},
+            name = #{name,jdbcType=VARCHAR},
+            acl_module_id = #{aclModuleId,jdbcType=INTEGER},
+            url = #{url,jdbcType=VARCHAR},
+            type = #{type,jdbcType=INTEGER},
+            status = #{status,jdbcType=INTEGER},
+            seq = #{seq,jdbcType=INTEGER},
+            remark = #{remark,jdbcType=VARCHAR},
+            operator = #{operator,jdbcType=VARCHAR},
+            operate_time = #{operateTime,jdbcType=TIMESTAMP},
+            operate_ip = #{operateIp,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="countByNameAndAclModuleId" parameterType="map" resultType="int">
+        SELECT count(1)
+        FROM sys_acl
+        WHERE acl_module_id = #{aclModuleId}
+        AND name = #{name}
+        <if test="id != null">
+            AND id != #{id}
+        </if>
+    </select>
+
+    <select id="countByAclModuleId" parameterType="map" resultType="int">
+        SELECT count(1)
+        FROM sys_acl
+        WHERE acl_module_id = #{aclModuleId}
+    </select>
+
+    <select id="getPageByAclModuleId" parameterType="map" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" />
+        FROM sys_acl
+        WHERE acl_module_id = #{aclModuleId}
+        ORDER BY seq ASC, name ASC
+        limit #{page.offset}, #{page.pageSize}
+    </select>
+
+    <select id="getAll" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" />
+        FROM sys_acl
+    </select>
+
+    <select id="getByIdList" parameterType="map" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" />
+        FROM sys_acl
+        WHERE id IN
+        <foreach collection="idList" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="getByUrl" parameterType="string" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" />
+        FROM sys_acl
+        WHERE url = #{url} <!-- url is not null and url != '' and  #{url} REGEXP url-->
+    </select>
+</mapper>

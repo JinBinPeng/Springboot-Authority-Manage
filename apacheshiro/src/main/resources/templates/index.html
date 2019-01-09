@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h1> 欢迎登录,
+        <th th:text="${session.user.username}">Name</th>
+    </h1>
+</body>
+</html>

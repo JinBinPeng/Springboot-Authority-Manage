@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pjb.springbootauthoritymanage.mapper.SysRoleAclMapper">
+    <resultMap id="BaseResultMap" type="com.pjb.springbootauthoritymanage.model.SysRoleAcl" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="role_id" property="roleId" jdbcType="INTEGER" />
+        <result column="acl_id" property="aclId" jdbcType="INTEGER" />
+        <result column="operator" property="operator" jdbcType="VARCHAR" />
+        <result column="operate_time" property="operateTime" jdbcType="TIMESTAMP" />
+        <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, role_id, acl_id, operator, operate_time, operate_ip
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_role_acl
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from sys_role_acl
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.pjb.springbootauthoritymanage.model.SysRoleAcl" >
+        insert into sys_role_acl (id, role_id, acl_id,
+                                  operator, operate_time, operate_ip
+        )
+        values (#{id,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}, #{aclId,jdbcType=INTEGER},
+                #{operator,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}, #{operateIp,jdbcType=VARCHAR}
+               )
+    </insert>
+    <insert id="insertSelective" parameterType="com.pjb.springbootauthoritymanage.model.SysRoleAcl" >
+        insert into sys_role_acl
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="roleId != null" >
+                role_id,
+            </if>
+            <if test="aclId != null" >
+                acl_id,
+            </if>
+            <if test="operator != null" >
+                operator,
+            </if>
+            <if test="operateTime != null" >
+                operate_time,
+            </if>
+            <if test="operateIp != null" >
+                operate_ip,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="roleId != null" >
+                #{roleId,jdbcType=INTEGER},
+            </if>
+            <if test="aclId != null" >
+                #{aclId,jdbcType=INTEGER},
+            </if>
+            <if test="operator != null" >
+                #{operator,jdbcType=VARCHAR},
+            </if>
+            <if test="operateTime != null" >
+                #{operateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operateIp != null" >
+                #{operateIp,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.pjb.springbootauthoritymanage.model.SysRoleAcl" >
+        update sys_role_acl
+        <set >
+            <if test="roleId != null" >
+                role_id = #{roleId,jdbcType=INTEGER},
+            </if>
+            <if test="aclId != null" >
+                acl_id = #{aclId,jdbcType=INTEGER},
+            </if>
+            <if test="operator != null" >
+                operator = #{operator,jdbcType=VARCHAR},
+            </if>
+            <if test="operateTime != null" >
+                operate_time = #{operateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operateIp != null" >
+                operate_ip = #{operateIp,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.pjb.springbootauthoritymanage.model.SysRoleAcl" >
+        update sys_role_acl
+        set role_id = #{roleId,jdbcType=INTEGER},
+            acl_id = #{aclId,jdbcType=INTEGER},
+            operator = #{operator,jdbcType=VARCHAR},
+            operate_time = #{operateTime,jdbcType=TIMESTAMP},
+            operate_ip = #{operateIp,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getAclIdListByRoleIdList" parameterType="map" resultType="int">
+        SELECT acl_id
+        FROM sys_role_acl
+        WHERE role_id in
+        <foreach collection="roleIdList" item="roleId" open="(" close=")" separator=",">
+            #{roleId}
+        </foreach>
+    </select>
+
+    <delete id="deleteByRoleId" parameterType="int">
+        DELETE FROM sys_role_acl
+        WHERE role_id = #{roleId}
+    </delete>
+
+    <insert id="batchInsert" parameterType="map">
+        insert into sys_role_acl (role_id, acl_id, operator, operate_time, operate_ip)
+        values
+        <foreach collection="roleAclList" item="roleAcl" separator=",">
+            (#{roleAcl.roleId}, #{roleAcl.aclId}, #{roleAcl.operator}, #{roleAcl.operateTime}, #{roleAcl.operateIp})
+        </foreach>
+    </insert>
+
+    <select id="getRoleIdListByAclId" parameterType="int" resultType="int">
+        SELECT role_id
+        FROM sys_role_acl
+        WHERE acl_id = #{aclId}
+    </select>
+</mapper>

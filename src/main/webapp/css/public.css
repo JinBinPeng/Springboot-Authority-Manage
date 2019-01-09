@@ -1,0 +1,514 @@
+body {
+    min-width: 1004px;
+    margin: 0px auto;
+    width: auto !important;
+    font-family: "����";
+    font-size: 12px
+}
+
+body {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+div {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+dl {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+dt {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+dd {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+ul {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+ol {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+li {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+h1 {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+h2 {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+h3 {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+h4 {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+h5 {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+h6 {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+pre {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+code {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+form {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+fieldset {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+legend {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+input {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+textarea {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+p {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+blockquote {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+th {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+td {
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+fieldset {
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px
+}
+
+img {
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px
+}
+
+address {
+    font-style: normal;
+    font-weight: normal
+}
+
+caption {
+    font-style: normal;
+    font-weight: normal
+}
+
+cite {
+    font-style: normal;
+    font-weight: normal
+}
+
+code {
+    font-style: normal;
+    font-weight: normal
+}
+
+em {
+    font-style: normal;
+    font-weight: normal
+}
+
+th {
+    font-style: normal;
+    font-weight: normal
+}
+
+var {
+    font-style: normal;
+    font-weight: normal
+}
+
+li {
+    list-style-type: none
+}
+
+caption {
+    text-align: left
+}
+
+th {
+    text-align: left
+}
+
+h1 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+h2 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+h3 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+h4 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+h5 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+a {
+    color: #616161;
+    text-decoration: none
+}
+
+a:hover {
+    color: #900;
+    text-decoration: none
+}
+
+.c {
+    clear: both
+}
+
+h1 {
+    font-size: 26px
+}
+
+h2 {
+    text-align: center;
+    color: #3f5d7c;
+    font-size: 16px;
+    font-weight: bold
+}
+
+h2 a {
+    color: #3f5d7c
+}
+
+h2 a:hover {
+    color: #3f5d7c
+}
+
+h3 {
+    font-size: 16px
+}
+
+h4 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 12px
+}
+
+/*tijiao*/
+
+.tableapply {
+    margin: 20px 0px;
+    width: 100%;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    vertical-align: top;
+    float: left;
+}
+
+.tableapply td {
+    padding: 1px 0px;
+    height: 40px;
+    text-align: left;
+    text-indent: 0px;
+    vertical-align: top;
+}
+
+.tableapply .td {
+    text-align: right;
+    line-height: 30px;
+    padding-right: 15px;
+    font-size: 14px
+}
+
+.tableapply .input80 {
+    background: rgb(246, 246, 246);
+    border-radius: 3px;
+    border: 1px solid rgb(187, 187, 187);
+    width: 80px;
+    height: 28px;
+    text-align: left;
+    line-height: 28px;
+    text-indent: 10px;
+    float: left;
+}
+
+.tableapply .input2 {
+    background: url("../images/input.gif") no-repeat;
+    border: currentcolor;
+    width: 214px;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    text-indent: 10px;
+    float: left;
+}
+
+.tableapply .input3 {
+    background: url("../images/input2.gif") no-repeat;
+    border: currentcolor;
+    width: 347px;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    text-indent: 10px;
+    float: left;
+}
+
+.tableapply .select {
+    margin: 3px 0px 0px;
+    width: 215px;
+    height: 24px;
+    line-height: 23px;
+    float: left;
+}
+
+.tableapply .textarea {
+    background: url("../images/textarea.gif") no-repeat;
+    border: currentcolor;
+    width: 454px;
+    height: 122px;
+    text-align: left;
+    line-height: 35px;
+    text-indent: 10px;
+    float: left;
+}
+
+.tableapply .sub {
+    background: url("../images/submit.gif") no-repeat;
+    margin: 10px 0px 0px;
+    border: currentcolor;
+    width: 111px;
+    height: 34px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.tableapply .sub1 {
+    background: url("../images/sub.gif") no-repeat;
+    margin: 10px 0px 0px;
+    border: currentcolor;
+    width: 111px;
+    height: 34px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.tableapply td span {
+    padding: 7px 0px 0px 10px;
+    height: 20px;
+    color: red;
+    float: left;
+}
+
+.tableapply td p {
+    padding: 0px 0px 0px 10px;
+    color: rgb(153, 153, 153);
+    line-height: 30px;
+    float: left;
+}
+
+/**/
+
+.p_bar {
+    padding: 3px;
+    margin: 3px 3px 30px 3px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.p_bar a {
+    border: #644226 1px solid;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    margin: 3px;
+    color: #644226;
+    padding-top: 3px;
+    text-decoration: none;
+}
+
+.p_bar a:hover {
+    border: #644226 1px solid;
+    color: #ffffff;
+    background-color: #644226;
+}
+
+.p_bar a:active {
+    border: #644226 1px solid;
+    color: #ffffff;
+}
+
+.p_bar .current {
+    border: #644226 1px solid;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    margin: 2px;
+    color: #fff;
+    padding-top: 2px;
+    background-color: #644226
+}
+
+.p_bar .disabled {
+    border: #644226 1px solid;
+    margin: 2px;
+    color: #644226;
+    padding-top: 2px 5px 2px 5px;
+}
+
+
+

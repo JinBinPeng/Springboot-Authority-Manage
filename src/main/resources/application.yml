@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/test1?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1997
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    port: 6379
+    host: localhost
+    timeout: 3000
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
