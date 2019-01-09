@@ -1,2 +1,5 @@
 # Springboot-Authority-Manage
 基于慕课网实战课程《Java开发企业级权限管理系统》升级的SpringBoot2.0权限管理系统
+
+apacheshiro和springsecurity模块分别是shiro和security的demo，可以不用启动，
+相关的SQL文件都有，密码是12345678，由于有权限管理，初始访问会强制跳到登录页面
